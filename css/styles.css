@@ -1,0 +1,377 @@
+/* ==================================== general =================================== */
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #D1AE6C;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: Manrope;
+    overflow-x: hidden;
+    background: #424041;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 48px;
+}
+
+.subtitle {
+    font-size: 24px;
+}
+
+.btn {
+    width: 250px;
+    border-radius: 10px;
+    border: none;
+    background: #363435;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ================================= header ================================= */
+
+header {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    background-color: #363435;
+}
+
+.header-burger {
+    display: none;
+}
+
+.header-inner {
+    justify-content: space-around;
+}
+
+.header-nav {
+    display: grid;
+    /* grid-auto-columns: 1fr 1fr; */
+    grid-auto-flow: column;
+    column-gap: 50px;
+    row-gap: 10px;
+    margin-top: 20px;
+}
+
+.header-nav li {
+    transition: 0.3s ease;
+}
+
+.header-nav li:hover {
+    font-weight: 500;
+    color: #d4bf96;
+}
+
+.header-nav li:nth-child(even) {
+    grid-row: 2;
+}
+
+.logo, .logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.contacts {
+    margin-top: 10px;
+    height: 75px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contacts a {
+    transition: 0.3s ease;
+}
+
+.contacts a:hover {
+    font-weight: 500;
+    color: #d4bf96;
+}
+
+/* ================================== main ================================== */
+
+.banner {
+    background-image: url("../images/banner.jpg");
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+}
+
+.banner .container {
+    z-index: 1;
+    position: relative;
+}
+
+.banner-inner {
+    max-width: 50%;
+    height: 100%;
+    margin-left: 50px;
+}
+
+.banner-title {
+    padding-top: 100px;
+}
+
+.banner-subtitle {
+    padding-top: 70px;
+    max-width: 70%;
+    line-height: 1.5em;
+}
+
+.banner-btn {
+    margin-top: 80px;
+    padding: 15px 0;
+    transition: 0.3s ease;
+}
+
+.banner-btn:hover {
+    color: #d4bf96;
+    background-color: #424041;
+}
+
+/* ================================ services ================================ */
+
+.services-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cards {
+    border-radius: 5px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    -webkit-box-shadow: 0px 0px 15px 9px rgba(40, 44, 47, 0.2);
+    -moz-box-shadow: 0px 0px 15px 9px rgba(40, 44, 47, 0.2);
+    box-shadow: 0px 0px 15px 9px rgba(40, 44, 47, 0.2);
+}
+
+.card {
+    width: 33%;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img {
+    display: block;
+    position: relative;
+    width: 70%;
+    height: 200px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.card-title {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+/* =============================== adventages =============================== */
+
+.adventages-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.adventages-inner {
+
+}
+
+.adventages-card {
+    align-items: center;
+    margin-left: 10%;
+}
+
+.adventages-card:nth-child(even) {
+    margin-right: 10%;
+}
+
+.adventages-card svg {
+  width: 250px;
+  height: 125px;
+}
+
+.adventages-card-title {
+    text-align: center;
+    font-size: 22px;
+}
+
+/* ================================== about ================================= */
+
+.about-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about-inner {
+    border-radius: 5px;
+    max-width: 80%;
+    padding: 30px;
+    margin: 20px auto;
+    -webkit-box-shadow: 0px 0px 15px 9px rgba(40, 44, 47, 0.2);
+    -moz-box-shadow: 0px 0px 15px 9px rgba(40, 44, 47, 0.2);
+    box-shadow: 0px 0px 15px 9px rgba(40, 44, 47, 0.2);
+}
+
+.about-text {
+    margin: 20px;
+}
+
+/* ================================== media ================================= */
+
+@media (max-width: 767px){
+
+    .banner {
+        background-position: 75%;
+    }
+
+    .banner-title {
+        padding-top: 45px;
+    }
+
+    .banner-subtitle {
+        padding-top: 50px;
+        max-width: 100%;
+    }
+
+    .banner-btn {
+        margin-top: 60px;
+    }
+
+    .service-card {
+        width: 50%;
+    }
+
+    .adventages-card {
+        width: 100%;
+        margin-right: 10%;
+    }
+
+    .about-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 591px) {
+    * {
+        font-size: 14px;
+    }
+
+    .header-burger {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: #D1AE6C;
+        position: relative;
+        top: 20px;
+    }
+
+    .header-burger::before {
+        content:"";
+        width: 30px;
+        height: 3px;
+        background: #D1AE6C;
+        position: absolute;
+        top: 10px;
+    }
+
+    .header-burger::after {
+        content:"";
+        width: 30px;
+        height: 3px;
+        background: #D1AE6C;
+        position: absolute;
+        top: 20px;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        background: #363435;
+    }
+
+    .header-nav {
+        margin-top: 15px;
+        display: block;
+    }
+
+    .header-nav li {
+        padding: 10px 30px;
+    }
+
+    .header-nav li a{
+        font-size: 18px;
+    }
+
+    .logo, .logo img {
+        width: 75px;
+        height: 75px;
+        z-index: 2;
+    }
+
+    .contacts {
+        margin-top: 0;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .banner {
+        background-position: 82%;
+    }
+
+    .banner-title {
+        font-size: 36px;
+        padding-top: 25px;
+    }
+
+    .banner-subtitle {
+        font-size: 22px;
+        padding-top: 25px;
+    }
+
+    .banner-btn {
+        margin-top: 30px;
+    }
+}
