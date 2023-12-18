@@ -285,6 +285,7 @@ header {
 
 .cost-btn {
     color:#D1AE6C;
+    cursor: pointer;
 }
 
 .close {
@@ -293,6 +294,7 @@ header {
     right: 20px;
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 
